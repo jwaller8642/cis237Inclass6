@@ -12,12 +12,19 @@ namespace cis237InClass6
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            /*
+            routes.MapRoute( 
+                name: "Mine",
+                url: "my/own/route",
+                defaults: new {controller = "Cars", action = "Index"}
+                );
+             */
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            
         }
     }
 }
